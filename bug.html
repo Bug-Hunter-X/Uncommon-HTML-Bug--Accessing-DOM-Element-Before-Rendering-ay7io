@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Incorrectly attempting to access an element that doesn't exist yet
+    document.getElementById('nonExistentElement').innerHTML = "This will cause an error";
+    // Correct way to access an element using an event listener
+    document.getElementById('myDiv').addEventListener("load", function(){
+        console.log("This is correct")
+    })
+
+  </script>
+</body>
+</html>
